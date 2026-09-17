@@ -1,0 +1,395 @@
+.memory-match-page {
+  max-width: 900px;
+  margin: auto;
+}
+
+.memory-back-btn {
+  border: none;
+  background: transparent;
+  color: #4f46e5;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.memory-match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.memory-match-header h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #172033;
+}
+
+.memory-match-header p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.moves-counter {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.moves-counter span {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.moves-counter strong {
+  display: block;
+  margin-top: 4px;
+  color: #4f46e5;
+  font-size: 22px;
+}
+
+.game-instruction {
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  padding: 15px;
+  color: #4338ca;
+  font-size: 13px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.memory-board {
+  width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.memory-card {
+  height: 110px;
+  border: 1px solid #c7d2fe;
+  border-radius: 14px;
+  background: #4f46e5;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.memory-card:hover {
+  transform: scale(1.03);
+}
+
+.memory-card.flipped {
+  background: white;
+  color: #172033;
+}
+
+.completion-box {
+  margin: 30px auto;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  max-width: 500px;
+}
+
+.completion-icon {
+  font-size: 40px;
+}
+
+.completion-box h2 {
+  color: #172033;
+  margin: 10px 0;
+}
+
+.completion-box p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.completion-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.restart-btn,
+.back-games-btn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.restart-btn {
+  background: #4f46e5;
+  color: white;
+}
+
+.back-games-btn {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.game-disclaimer {
+  margin-top: 25px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  color: #64748b;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .memory-board {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .memory-card {
+    height: 80px;
+  }
+
+  .memory-match-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+/* ================================
+   MEMORY CARD FLIP FIX
+   ================================ */
+
+.memory-card {
+  position: relative;
+  overflow: hidden;
+  perspective: 800px;
+}
+
+.memory-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.memory-card-front,
+.memory-card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Hidden card: show ? only */
+.memory-card:not(.flipped) .memory-card-front {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.memory-card:not(.flipped) .memory-card-back {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.85);
+}
+
+/* Flipped/matched card: show emoji only */
+.memory-card.flipped .memory-card-front {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.85);
+}
+
+.memory-card.flipped .memory-card-back {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Keep matched cards looking active */
+.memory-card.flipped {
+  background: white;
+  color: #172033;
+}
+/* =================================
+   GAME COMPLETION SCREEN
+   ================================= */
+
+.memory-complete-card {
+  max-width: 680px;
+  margin: 30px auto;
+  padding: 42px 45px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.complete-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  background: #fef3c7;
+  border-radius: 50%;
+}
+
+.memory-complete-card h2 {
+  margin: 0;
+  font-size: 32px;
+  color: #172033;
+}
+
+.complete-message {
+  margin: 10px 0 28px;
+  color: #64748b;
+  font-size: 17px;
+}
+
+/* Final score */
+
+.final-score-box {
+  padding: 22px;
+  margin-bottom: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.final-score-box span {
+  display: block;
+  margin-bottom: 6px;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.final-score-box strong {
+  display: block;
+  font-size: 42px;
+  line-height: 1.1;
+  color: #2563eb;
+}
+
+/* Moves + Pairs */
+
+.final-game-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.final-stat {
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.final-stat span {
+  display: block;
+  margin-bottom: 6px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.final-stat strong {
+  display: block;
+  font-size: 25px;
+  color: #172033;
+}
+
+/* Save status */
+
+.game-save-status {
+  margin: 14px 0 22px;
+  color: #15803d;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Buttons */
+
+.complete-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.play-again-btn,
+.back-games-btn {
+  min-height: 44px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.play-again-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.play-again-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.back-games-btn {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.back-games-btn:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .memory-complete-card {
+    padding: 30px 20px;
+  }
+
+  .final-game-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .complete-actions {
+    flex-direction: column;
+  }
+
+  .play-again-btn,
+  .back-games-btn {
+    width: 100%;
+  }
+}

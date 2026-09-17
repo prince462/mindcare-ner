@@ -1,0 +1,453 @@
+.patient-app-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding-bottom: 50px;
+}
+
+.patient-app-topbar {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 16px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.patient-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patient-brand-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.patient-brand strong {
+  display: block;
+  color: #0f172a;
+  font-size: 17px;
+}
+
+.patient-brand span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.caregiver-mode-btn {
+  border: 1px solid #dbeafe;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 10px 15px;
+  border-radius: 9px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.patient-welcome {
+  margin: 35px auto 22px;
+  max-width: 1180px;
+  padding: 28px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.patient-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.patient-welcome span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.patient-welcome h1 {
+  margin: 4px 0;
+  color: #0f172a;
+  font-size: 27px;
+}
+
+.patient-welcome p {
+  margin: 0;
+  color: #64748b;
+}
+
+.voice-welcome-btn {
+  margin-left: auto;
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.patient-summary {
+  max-width: 1180px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.patient-summary-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.patient-summary-card span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.patient-summary-card strong {
+  display: block;
+  margin: 7px 0 3px;
+  color: #0f172a;
+  font-size: 24px;
+}
+
+.patient-summary-card small {
+  color: #94a3b8;
+}
+
+.patient-reminder {
+  max-width: 1136px;
+  margin: 0 auto 30px;
+  padding: 22px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.reminder-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.patient-reminder span {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.patient-reminder h3 {
+  margin: 5px 0;
+  color: #0f172a;
+}
+
+.patient-reminder p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.patient-reminder button {
+  margin-left: auto;
+  border: 1px solid #bfdbfe;
+  background: white;
+  color: #2563eb;
+  padding: 10px 14px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.patient-section-header {
+  max-width: 1180px;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.patient-section-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 21px;
+}
+
+.patient-section-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.patient-games-grid {
+  max-width: 1180px;
+  margin: 0 auto 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.patient-game-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  transition: 0.2s;
+}
+
+.patient-game-card:hover {
+  transform: translateY(-2px);
+  border-color: #bfdbfe;
+}
+
+.patient-game-icon {
+  width: 50px;
+  height: 50px;
+  background: #f8fafc;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.patient-game-card h3 {
+  color: #0f172a;
+  margin: 15px 0 7px;
+}
+
+.patient-game-card p {
+  color: #64748b;
+  min-height: 42px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.patient-game-card button {
+  width: 100%;
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 11px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.patient-memory-section {
+  max-width: 1180px;
+  margin: 0 auto 30px;
+}
+
+.show-memory-btn {
+  border: 1px solid #dbeafe;
+  background: white;
+  color: #2563eb;
+  padding: 9px 14px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.patient-memory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.patient-memory-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.patient-memory-card > div {
+  font-size: 30px;
+}
+
+.patient-memory-card h3 {
+  margin: 10px 0 5px;
+  color: #0f172a;
+}
+
+.patient-memory-card p {
+  color: #64748b;
+  font-size: 13px;
+  min-height: 38px;
+}
+
+.patient-memory-card button {
+  border: 1px solid #dbeafe;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.patient-no-memory {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  color: #64748b;
+  border-radius: 14px;
+  grid-column: 1 / -1;
+}
+
+.patient-voice-card {
+  max-width: 1136px;
+  margin: 0 auto 25px;
+  padding: 22px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.patient-voice-icon {
+  width: 50px;
+  height: 50px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.patient-voice-card h3 {
+  margin: 0 0 5px;
+  color: #0f172a;
+}
+
+.patient-voice-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.patient-voice-card button {
+  margin-left: auto;
+  border: none;
+  background: #0f172a;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.patient-app-info {
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 15px 18px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  display: flex;
+  gap: 10px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.patient-app-info p {
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .patient-summary {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .patient-games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .patient-section-header,
+  .patient-memory-section,
+  .patient-voice-card,
+  .patient-app-info,
+  .patient-reminder,
+  .patient-welcome {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .patient-memory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .patient-app-topbar {
+    padding: 12px 18px;
+  }
+
+  .caregiver-mode-btn {
+    font-size: 11px;
+  }
+
+  .patient-welcome {
+    flex-wrap: wrap;
+  }
+
+  .voice-welcome-btn {
+    margin-left: 0;
+  }
+
+  .patient-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .patient-games-grid,
+  .patient-memory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-reminder,
+  .patient-voice-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .patient-reminder button,
+  .patient-voice-card button {
+    margin-left: 0;
+  }
+}
